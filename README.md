@@ -42,7 +42,7 @@ i) Using Averaging Filter
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-image1 = cv2.imread('rocky.jpg')
+image1 = cv2.imread('kobe.jpg')
 image2 = cv2.cvtColor(image1, cv2.COLOR_BGR2RGB)
 kernel = np.ones((11,11), np. float32)/121
 image3 = cv2.filter2D(image2, -1, kernel)
@@ -66,7 +66,7 @@ ii) Using Weighted Averaging Filter
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-image1 = cv2.imread('rocky.jpg')
+image1 = cv2.imread('kobe.jpg')
 image2 = cv2.cvtColor(image1, cv2.COLOR_BGR2RGB)
 kernel2 = np.array([[1,2,1],[2,4,2],[1,2,1]])/16
 image4 = cv2.filter2D(image2, -1, kernel2)
@@ -83,7 +83,7 @@ iii) Using Gaussian Filter
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-image1 = cv2.imread('rocky.jpg')
+image1 = cv2.imread('kobe.jpg')
 image2 = cv2.cvtColor(image1, cv2.COLOR_BGR2RGB)
 gaussian_blur = cv2.GaussianBlur(src=image2, ksize=(11,11), sigmaX=0, sigmaY=0)
 plt.imshow(gaussian_blur)
@@ -100,7 +100,7 @@ iv) Using Median Filter
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-image1 = cv2.imread('rocky.jpg')
+image1 = cv2.imread('kobe.jpg')
 image2 = cv2.cvtColor(image1, cv2.COLOR_BGR2RGB)
 median=cv2.medianBlur (src=image2, ksize=11)
 plt.imshow(median)
@@ -118,7 +118,7 @@ i) Using Laplacian Kernal
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-image1 = cv2.imread('rocky.jpg')
+image1 = cv2.imread('kobe.jpg')
 image2 = cv2.cvtColor(image1, cv2.COLOR_BGR2RGB)
 kernel3 = np.array([[0,1,0], [1, -4,1],[0,1,0]])
 image5 =cv2.filter2D(image2, -1, kernel3)
@@ -135,7 +135,7 @@ ii) Using Laplacian Operator
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-image1 = cv2.imread('rocky.jpg')
+image1 = cv2.imread('kobe.jpg')
 image2 = cv2.cvtColor(image1, cv2.COLOR_BGR2RGB)
 new_image = cv2.Laplacian (image2, cv2.CV_64F)
 plt.imshow(new_image)
